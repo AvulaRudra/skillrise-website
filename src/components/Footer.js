@@ -6,7 +6,7 @@ function Footer() {
   return (
     <footer className="bg-gray-800 text-white p-4">
       <div className="container mx-auto text-center">
-        <p>Contact : ndanny1803@gmail.com</p>
+        <p>Contact : samuel.skillrise@gmail.com</p>
         <div className="mt-4 flex justify-center space-x-4">
           <FontAwesomeIcon icon={faCcVisa} size="2x" />
           <FontAwesomeIcon icon={faCcMastercard} size="2x" />
