@@ -4,7 +4,8 @@ import axios from 'axios';
 function Contact() {
   const [formData, setFormData] = useState({
     name: '',
-    email: ''
+    email: '',
+    message: ''
   });
 
   const handleChange = (e) => {
@@ -22,7 +23,8 @@ function Contact() {
         alert('Message sent successfully');
         setFormData({
           name: '',
-          email: ''
+          email: '',
+          message: ''
         });
       })
       .catch(error => {
@@ -30,7 +32,6 @@ function Contact() {
         console.error('There was an error!', error);
       });
   };
-  
 
   return (
     <section id="contact" className="p-8 bg-gray-100">
@@ -44,6 +45,10 @@ function Contact() {
           <div>
             <label htmlFor="email" className="block text-left mb-2">Email *</label>
             <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} className="w-full border p-2" required />
+          </div>
+          <div>
+            <label htmlFor="message" className="block text-left mb-2">Message *</label>
+            <textarea id="message" name="message" value={formData.message} onChange={handleChange} className="w-full border p-2" required />
           </div>
           <button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Submit</button>
         </form>
